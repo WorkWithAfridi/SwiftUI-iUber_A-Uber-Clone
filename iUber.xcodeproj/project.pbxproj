@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		EFD7360C2B4AEEBD00D277AB /* iUberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7360B2B4AEEBD00D277AB /* iUberApp.swift */; };
-		EFD7360E2B4AEEBD00D277AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7360D2B4AEEBD00D277AB /* ContentView.swift */; };
-		EFD736102B4AEEBD00D277AB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7360F2B4AEEBD00D277AB /* Item.swift */; };
 		EFD736122B4AEEBF00D277AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD736112B4AEEBF00D277AB /* Assets.xcassets */; };
 		EFD736152B4AEEBF00D277AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD736142B4AEEBF00D277AB /* Preview Assets.xcassets */; };
+		EFD736232B4AF08D00D277AB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD736222B4AF08D00D277AB /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFD736082B4AEEBD00D277AB /* iUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7360B2B4AEEBD00D277AB /* iUberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iUberApp.swift; sourceTree = "<group>"; };
-		EFD7360D2B4AEEBD00D277AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EFD7360F2B4AEEBD00D277AB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EFD736112B4AEEBF00D277AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD736142B4AEEBF00D277AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFD736222B4AF08D00D277AB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +51,11 @@
 		EFD7360A2B4AEEBD00D277AB /* iUber */ = {
 			isa = PBXGroup;
 			children = (
-				EFD7360B2B4AEEBD00D277AB /* iUberApp.swift */,
-				EFD7360D2B4AEEBD00D277AB /* ContentView.swift */,
-				EFD7360F2B4AEEBD00D277AB /* Item.swift */,
+				EFD7361F2B4AF06900D277AB /* Models */,
+				EFD7361E2B4AF06200D277AB /* Managers */,
+				EFD7361D2B4AF05200D277AB /* Extensions */,
+				EFD7361C2B4AF04A00D277AB /* Core */,
+				EFD7361B2B4AF04500D277AB /* App */,
 				EFD736112B4AEEBF00D277AB /* Assets.xcassets */,
 				EFD736132B4AEEBF00D277AB /* Preview Content */,
 			);
@@ -68,6 +68,59 @@
 				EFD736142B4AEEBF00D277AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFD7361B2B4AF04500D277AB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EFD7360B2B4AEEBD00D277AB /* iUberApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EFD7361C2B4AF04A00D277AB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EFD736212B4AF08000D277AB /* Views */,
+				EFD736202B4AF07400D277AB /* ViewModel */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EFD7361D2B4AF05200D277AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EFD7361E2B4AF06200D277AB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EFD7361F2B4AF06900D277AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFD736202B4AF07400D277AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFD736212B4AF08000D277AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFD736222B4AF08D00D277AB /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD7360E2B4AEEBD00D277AB /* ContentView.swift in Sources */,
-				EFD736102B4AEEBD00D277AB /* Item.swift in Sources */,
+				EFD736232B4AF08D00D277AB /* HomeView.swift in Sources */,
 				EFD7360C2B4AEEBD00D277AB /* iUberApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
