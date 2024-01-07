@@ -18,7 +18,7 @@ struct LocationSearchActivationView: View {
                 .foregroundStyle(Color(.darkGray))
             Spacer()
         }
-        .padding(.vertical, 15)
+        .padding(.vertical, 11)
         .background(
             Rectangle()
                 .fill(Color.white)

@@ -16,11 +16,11 @@ struct HomeView: View {
             VStack{
                 HStack(alignment: .center){
                     MapViewActionButton()
+                    LocationSearchActivationView()
                         .onTapGesture {
                             print("Button pressed")
                             routeManager.to(route: .locationSearchView)
                         }
-                    LocationSearchActivationView()
                 }
                 .padding(.leading, 12)
                 .padding(.trailing, 24)
