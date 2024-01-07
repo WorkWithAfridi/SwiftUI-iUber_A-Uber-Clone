@@ -15,6 +15,10 @@
 		EFD736272B4AF2C900D277AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD736262B4AF2C900D277AB /* LocationManager.swift */; };
 		EFD7362D2B4AF91E00D277AB /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7362C2B4AF91E00D277AB /* LocationSearchActivationView.swift */; };
 		EFD7362F2B4AFBE300D277AB /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7362E2B4AFBE300D277AB /* MapViewActionButton.swift */; };
+		EFD736312B4B02C200D277AB /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD736302B4B02C200D277AB /* LocationSearchView.swift */; };
+		EFD736332B4B089400D277AB /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD736322B4B089400D277AB /* LocationSearchResultCell.swift */; };
+		EFD736362B4B0B5E00D277AB /* RouteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD736352B4B0B5E00D277AB /* RouteManager.swift */; };
+		EFD736382B4B0B7700D277AB /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD736372B4B0B7700D277AB /* Routes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		EFD736262B4AF2C900D277AB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EFD7362C2B4AF91E00D277AB /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
 		EFD7362E2B4AFBE300D277AB /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
+		EFD736302B4B02C200D277AB /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		EFD736322B4B089400D277AB /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		EFD736352B4B0B5E00D277AB /* RouteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteManager.swift; sourceTree = "<group>"; };
+		EFD736372B4B0B7700D277AB /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		EFD7361E2B4AF06200D277AB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EFD736342B4B0B4800D277AB /* RouteManager */,
 				EFD736262B4AF2C900D277AB /* LocationManager.swift */,
 			);
 			path = Managers;
@@ -156,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				EFD7362C2B4AF91E00D277AB /* LocationSearchActivationView.swift */,
+				EFD736302B4B02C200D277AB /* LocationSearchView.swift */,
+				EFD736322B4B089400D277AB /* LocationSearchResultCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +176,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFD736342B4B0B4800D277AB /* RouteManager */ = {
+			isa = PBXGroup;
+			children = (
+				EFD736352B4B0B5E00D277AB /* RouteManager.swift */,
+				EFD736372B4B0B7700D277AB /* Routes.swift */,
+			);
+			path = RouteManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,12 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD736312B4B02C200D277AB /* LocationSearchView.swift in Sources */,
 				EFD736272B4AF2C900D277AB /* LocationManager.swift in Sources */,
 				EFD7362F2B4AFBE300D277AB /* MapViewActionButton.swift in Sources */,
 				EFD736252B4AF10D00D277AB /* UberMapViewRepresentable.swift in Sources */,
 				EFD736232B4AF08D00D277AB /* HomeView.swift in Sources */,
 				EFD7360C2B4AEEBD00D277AB /* iUberApp.swift in Sources */,
+				EFD736362B4B0B5E00D277AB /* RouteManager.swift in Sources */,
+				EFD736382B4B0B7700D277AB /* Routes.swift in Sources */,
 				EFD7362D2B4AF91E00D277AB /* LocationSearchActivationView.swift in Sources */,
+				EFD736332B4B089400D277AB /* LocationSearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

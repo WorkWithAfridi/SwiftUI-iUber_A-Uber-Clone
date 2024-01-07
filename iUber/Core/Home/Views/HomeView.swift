@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var routeManager: RouteManger
     var body: some View {
         ZStack{
             UberMapViewRepresentable()
@@ -15,6 +16,10 @@ struct HomeView: View {
             VStack{
                 HStack(alignment: .center){
                     MapViewActionButton()
+                        .onTapGesture {
+                            print("Button pressed")
+                            routeManager.to(route: .locationSearchView)
+                        }
                     LocationSearchActivationView()
                 }
                 .padding(.leading, 12)
@@ -28,4 +33,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(RouteManger())
 }

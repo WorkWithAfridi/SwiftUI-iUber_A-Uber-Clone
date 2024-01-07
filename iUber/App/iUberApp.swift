@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct iUberApp: App {
+    @StateObject private var routeManager: RouteManger = RouteManger()
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            NavigationStack(path: $routeManager.path) {
+                HomeView()
+                    .navigationDestination(for: Route.self) { route in
+                        GetView(route: route)
+                    }
+            }
         }
+        .environmentObject(routeManager)
     }
 }
