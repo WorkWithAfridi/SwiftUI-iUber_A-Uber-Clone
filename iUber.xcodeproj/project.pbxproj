@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF9859562B4BE2F200BD059C /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9859552B4BE2F200BD059C /* LocationSearchViewModel.swift */; };
 		EFD7360C2B4AEEBD00D277AB /* iUberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7360B2B4AEEBD00D277AB /* iUberApp.swift */; };
 		EFD736122B4AEEBF00D277AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD736112B4AEEBF00D277AB /* Assets.xcassets */; };
 		EFD736152B4AEEBF00D277AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD736142B4AEEBF00D277AB /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF9859552B4BE2F200BD059C /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		EFD736082B4AEEBD00D277AB /* iUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7360B2B4AEEBD00D277AB /* iUberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iUberApp.swift; sourceTree = "<group>"; };
 		EFD736112B4AEEBF00D277AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		EFD7362B2B4AF90500D277AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF9859552B4BE2F200BD059C /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				EFD7362F2B4AFBE300D277AB /* MapViewActionButton.swift in Sources */,
 				EFD736252B4AF10D00D277AB /* UberMapViewRepresentable.swift in Sources */,
 				EFD736232B4AF08D00D277AB /* HomeView.swift in Sources */,
+				EF9859562B4BE2F200BD059C /* LocationSearchViewModel.swift in Sources */,
 				EFD7360C2B4AEEBD00D277AB /* iUberApp.swift in Sources */,
 				EFD736362B4B0B5E00D277AB /* RouteManager.swift in Sources */,
 				EFD736382B4B0B7700D277AB /* Routes.swift in Sources */,
