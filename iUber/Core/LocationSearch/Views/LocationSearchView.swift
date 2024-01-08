@@ -10,9 +10,9 @@ import UIKit
 
 struct LocationSearchView: View {
     @State private var startLocationText = ""
-    @State private var destinationLocationText = ""
     @EnvironmentObject private var routeManager: RouteManger
-    @StateObject private var locationSearchVM = LocationSearchViewModel()
+    @EnvironmentObject private var locationSearchVM: LocationSearchViewModel
+    
     var body: some View {
         VStack{
             
@@ -80,6 +80,10 @@ struct LocationSearchView: View {
                             title: result.title,
                             subtitle: result.subtitle
                         )
+                        .onTapGesture {
+                            locationSearchVM.selectLocation(result)
+                            locationSearchVM.showSelectedLocation.toggle()
+                        }
                         .padding(.vertical, 5)
                     }
                 }
@@ -92,4 +96,5 @@ struct LocationSearchView: View {
 #Preview {
     LocationSearchView()
         .environmentObject(RouteManger())
+//        showLocationSearchView: .constant(false))
 }

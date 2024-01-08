@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct iUberApp: App {
     @StateObject private var routeManager: RouteManger = RouteManger()
+    @StateObject private var locationSearchViewModel: LocationSearchViewModel = LocationSearchViewModel()
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $routeManager.path) {
@@ -19,6 +20,7 @@ struct iUberApp: App {
                     }
             }
         }
-        .environmentObject(routeManager)
+        .environmentObject(locationSearchViewModel)
+        .environmentObject(locationSe)
     }
 }
