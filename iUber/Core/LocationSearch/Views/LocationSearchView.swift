@@ -83,6 +83,7 @@ struct LocationSearchView: View {
                         .onTapGesture {
                             locationSearchVM.selectLocation(result)
                             locationSearchVM.showSelectedLocation.toggle()
+                            routeManager.pop()
                         }
                         .padding(.vertical, 5)
                     }
