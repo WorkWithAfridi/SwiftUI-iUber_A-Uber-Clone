@@ -10,14 +10,18 @@ import MapKit
 
 class LocationSearchViewModel: NSObject, ObservableObject{
     @Published var showSelectedLocation: Bool = false
-    @Published var selectedLocation: String?
+    @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
     
     func selectLocation(_ localSearch: MKLocalSearchCompletion){
-        //        self.selectedLocation = location
-        //        print("DEBUG: Selected location is: \(self.selectedLocation)")
         locationSearch(forLocalSearchCompletion: localSearch) { response, error in
+            if let error = error {
+                print("DEBUG: Search failed with \(error.localizedDescription)")
+                return
+            }
             guard let item = response?.mapItems.first else {return}
             let coordinate = item.placemark.coordinate
+            
+            self.selectedLocationCoordinate = coordinate
             
             print("DEGUB: Location coordiantes \(coordinate)")
         }
