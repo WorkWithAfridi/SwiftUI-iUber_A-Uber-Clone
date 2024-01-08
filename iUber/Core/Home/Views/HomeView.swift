@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var routeManager: RouteManger
+    
     var body: some View {
         ZStack{
             UberMapViewRepresentable()

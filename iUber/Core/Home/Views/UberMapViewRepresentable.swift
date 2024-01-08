@@ -43,6 +43,7 @@ extension UberMapViewRepresentable{
     class MapCoordinator: NSObject, MKMapViewDelegate{
         
         var userLocationCoordinate: CLLocationCoordinate2D?
+        var currentRegion: MKCoordinateRegion?
         
         // MARK: - Properties
         let parent: UberMapViewRepresentable
@@ -66,12 +67,13 @@ extension UberMapViewRepresentable{
                     longitudeDelta: 0.05
                 )
             )
+            self.currentRegion = region
             parent.mapView.setRegion(region, animated: true)
         }
         
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             let polyline = MKPolylineRenderer(overlay: overlay)
-            polyline.strokeColor = .blue
+            polyline.strokeColor = .black
             polyline.lineWidth = 6
             return polyline
         }
@@ -113,6 +115,14 @@ extension UberMapViewRepresentable{
             guard let userLocationCoordinate = self.userLocationCoordinate else {return}
             getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
+            }
+        }
+        
+        func clearMapView(){
+            parent.mapView.removeAnnotations(parent.mapView.annotations)
+            parent.mapView.removeOverlays(parent.mapView.overlays)
+            if let currentRegion = currentRegion{
+                parent.mapView.setRegion(currentRegion, animated: true)
             }
         }
     }
